@@ -1,0 +1,19 @@
+{
+  "name": "google-news-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to get the latest news from Google News and the Official Google Blog",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "google-news": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "open": "^10.1.0",
+    "rss-parser": "^3.13.0"
+  }
+}

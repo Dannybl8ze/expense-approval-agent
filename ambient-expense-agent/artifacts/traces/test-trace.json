@@ -1,0 +1,57 @@
+{
+  "eval_cases": [
+    {
+      "prompt": {
+        "parts": [
+          {
+            "text": "{\"amount\": 45.0, \"submitter\": \"alice@company.com\", \"category\": \"software\", \"description\": \"IDE License\", \"date\": \"2026-06-20\"}"
+          }
+        ],
+        "role": "user"
+      },
+      "responses": [
+        {
+          "response": {
+            "parts": [
+              {
+                "text": "Auto-approved expense of $45.0 submitted by alice@company.com."
+              }
+            ],
+            "role": "model"
+          }
+        }
+      ],
+      "eval_case_id": "test_auto",
+      "agent_data": {
+        "agents": {
+          "expense_approval_workflow": {
+            "agent_id": "expense_approval_workflow",
+            "agent_type": "Workflow",
+            "description": "",
+            "tools": [],
+            "sub_agents": []
+          }
+        },
+        "turns": [
+          {
+            "turn_index": 0,
+            "turn_id": "turn_0",
+            "events": [
+              {
+                "author": "expense_approval_workflow",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Auto-approved expense of $45.0 submitted by alice@company.com."
+                    }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
